@@ -1,0 +1,14 @@
+body {
+text-align: center;
+font-family: sans-serif;
+background-color: #87ceeb;
+}
+ 
+h1 {
+color: blue;
+}
+ 
+button {
+padding: 10px 20px;
+font-size: 18px;
+}
