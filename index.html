@@ -1,49 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>今日の天気</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Leaflet（地図） -->
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
+  <title>APIとは？</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="getLocation()">
+<body>
 
-    <header>
+  <header>
+    <h1>APIとは？</h1>
+    <p>サービス同士をつなぐ「窓口」</p>
+  </header>
 
-    <h1>🌤️ 今日の天気</h1>
 
-    <a href="quiz.html">お天気クイズ</a>
+  <main>
 
-    </header>
-    
-    <div class="container">
+    <!-- APIの基本説明 -->
+    <section class="intro">
 
-        <!-- 左：天気情報 -->
-        <div class="weather-panel">
-            <p id="location">場所はまだ取得していません</p>
-            <p id="weather">天気情報を取得していません</p>
-        </div>
+      <h2>APIを天気で例えると？</h2>
 
-        <!-- 右：地図 -->
-        <div class="map-panel">
-            <h2>🗺️ 地図</h2>
-            <p>地図をクリックすると場所を変更できます。</p>
-            <div id="map"></div>
-        </div>
+      <p>
+        APIとは、別のサービスに情報をお願いしたり、<br>
+        情報を受け取ったりするための仕組みです。
+      </p>
 
-    </div>
+    </section>
 
-    <script
-        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
-    </script>
 
-    <script src="index.js"></script>
+    <!-- ①〜⑤の流れ -->
+    <section class="flow">
+
+      <div class="card" data-step="1">
+        <div class="icon">🙋</div>
+        <h3>① お願いする</h3>
+        <p>
+          「神戸の<br>
+          天気をください」
+        </p>
+      </div>
+
+
+      <div class="arrow">→</div>
+
+
+      <div class="card api" data-step="2">
+        <div class="icon">🔌</div>
+        <h3>② API</h3>
+        <p>
+          天気サービスに<br>
+          情報を要求する
+        </p>
+      </div>
+
+
+      <div class="arrow">→</div>
+
+
+      <div class="card api" data-step="3">
+        <div class="icon">☀️</div>
+        <h3>③ データが届く</h3>
+        <p>
+          「晴れ・25℃」などの<br>
+          データが返ってくる
+        </p>
+      </div>
+
+
+      <div class="arrow">→</div>
+
+
+      <div class="card program" data-step="4">
+        <div class="icon">💻</div>
+        <h3>④ 加工する</h3>
+        <p>
+          文字やデザインを<br>
+          追加して見やすくする
+        </p>
+      </div>
+
+
+      <div class="arrow">→</div>
+
+
+      <div class="card sns" data-step="5">
+        <div class="icon">📱</div>
+        <h3>⑤ 投稿する</h3>
+        <p>
+          SNSやWebサイトに<br>
+          表示・投稿する
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- 詳細説明 -->
+    <section id="detail" class="detail">
+
+      <button id="closeButton">×</button>
+
+      <div id="detailIllustration" class="detail-illustration">
+        💡
+      </div>
+
+      <div class="detail-text">
+
+        <span id="detailNumber">STEP 1</span>
+
+        <h2 id="detailTitle">
+          項目をクリックしてください
+        </h2>
+
+        <p id="detailDescription">
+          上の①〜⑤をクリックすると、
+          その仕組みを詳しく説明します。
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- 重要ポイント -->
+    <section class="point">
+
+      <h2>💡 重要なポイント</h2>
+
+      <ul>
+
+        <li>
+          <strong>API</strong>は、
+          サービス同士が情報をやり取りするための「窓口」
+        </li>
+
+        <li>
+          APIから受け取ったデータを
+          自分のプログラムで加工できる
+        </li>
+
+        <li>
+          加工したデータをWebサイトや
+          アプリ、SNSなどで利用できる
+        </li>
+
+      </ul>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    APIを使うことで、さまざまなサービスを組み合わせることができます。
+  </footer>
+
+
+  <script src="script.js"></script>
 
 </body>
 </html>

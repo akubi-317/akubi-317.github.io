@@ -1,14 +1,398 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-text-align: center;
-font-family: sans-serif;
-background-color: #87ceeb;
+  margin: 0;
+  font-family: sans-serif;
+  background: #f4f7fb;
+  color: #222;
 }
- 
-h1 {
-color: blue;
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+header {
+  background: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
 }
- 
-button {
-padding: 10px 20px;
-font-size: 18px;
+
+header h1 {
+  margin: 0;
+  font-size: 48px;
+}
+
+header p {
+  font-size: 22px;
+  margin-top: 12px;
+}
+
+
+/* =========================
+   メイン
+========================= */
+
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+
+/* =========================
+   API説明
+========================= */
+
+.intro {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.intro h2 {
+  color: #2563eb;
+  font-size: 32px;
+}
+
+.intro p {
+  font-size: 21px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   ①〜⑤
+========================= */
+
+.flow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  margin: 45px 0;
+
+  flex-wrap: wrap;
+}
+
+
+/* カード */
+
+.card {
+  background: white;
+
+  width: 200px;
+  min-height: 190px;
+
+  border-radius: 20px;
+
+  padding: 25px 15px;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+
+/* カードにマウスを乗せる */
+
+.card:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 選択中 */
+
+.card.active {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 0 0 5px #2563eb,
+    0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* アイコン */
+
+.icon {
+  font-size: 55px;
+
+  margin-bottom: 10px;
+}
+
+
+/* タイトル */
+
+.card h3 {
+  margin: 8px 0;
+
+  font-size: 22px;
+}
+
+
+/* 説明 */
+
+.card p {
+  line-height: 1.6;
+
+  color: #555;
+}
+
+
+/* API */
+
+.api {
+  border: 4px solid #2563eb;
+}
+
+
+/* プログラム */
+
+.program {
+  border: 4px solid #16a34a;
+}
+
+
+/* SNS */
+
+.sns {
+  border: 4px solid #9333ea;
+}
+
+
+/* 矢印 */
+
+.arrow {
+  font-size: 40px;
+
+  color: #2563eb;
+
+  font-weight: bold;
+}
+
+
+/* =========================
+   詳細説明
+========================= */
+
+.detail {
+  position: relative;
+
+  display: none;
+
+  grid-template-columns: 1fr 1.5fr;
+
+  align-items: center;
+
+  gap: 40px;
+
+  background: white;
+
+  padding: 40px;
+
+  margin: 40px 0;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.12);
+
+  animation: appear 0.35s ease;
+}
+
+
+/* 表示 */
+
+.detail.show {
+  display: grid;
+}
+
+
+/* アニメーション */
+
+@keyframes appear {
+
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* 閉じるボタン */
+
+#closeButton {
+  position: absolute;
+
+  right: 20px;
+  top: 15px;
+
+  border: none;
+
+  background: transparent;
+
+  font-size: 35px;
+
+  color: #777;
+
+  cursor: pointer;
+}
+
+#closeButton:hover {
+  color: #222;
+}
+
+
+/* 詳細イラスト */
+
+.detail-illustration {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 250px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dbeafe,
+      #eff6ff
+    );
+
+  font-size: 120px;
+}
+
+
+/* 詳細文章 */
+
+.detail-text {
+  padding: 20px;
+}
+
+
+#detailNumber {
+  display: inline-block;
+
+  background: #2563eb;
+
+  color: white;
+
+  padding: 7px 14px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+
+#detailTitle {
+  font-size: 32px;
+
+  margin: 15px 0;
+}
+
+
+#detailDescription {
+  font-size: 20px;
+
+  line-height: 2;
+
+  color: #444;
+}
+
+
+/* =========================
+   ポイント
+========================= */
+
+.point {
+  background: white;
+
+  border-left: 8px solid #2563eb;
+
+  padding: 25px;
+
+  margin-top: 30px;
+
+  border-radius: 10px;
+}
+
+.point h2 {
+  margin-top: 0;
+}
+
+.point li {
+  font-size: 20px;
+
+  margin: 12px 0;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   フッター
+========================= */
+
+footer {
+  text-align: center;
+
+  padding: 30px;
+
+  color: #666;
+}
+
+
+/* =========================
+   スマートフォン
+========================= */
+
+@media (max-width: 700px) {
+
+  header h1 {
+    font-size: 36px;
+  }
+
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+
+
+  .detail {
+    grid-template-columns: 1fr;
+
+    padding: 25px;
+  }
+
 }
