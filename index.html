@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>今日の天気</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>今日の天気</title>
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Leaflet（地図） -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
 </head>
-<body>
- 
-<h1>今日の天気</h1>
- 
+
 <body onload="getLocation()">
- 
-<p id="location">場所はまだ取得していません</p>
-<p id="weather">天気情報を取得していません</p>
- 
-<script src="script.js"></script>
- 
+
+    <header>
+
+    <h1>🌤️ 今日の天気</h1>
+
+    <a href="quiz.html">お天気クイズ</a>
+
+    </header>
+    
+    <div class="container">
+
+        <!-- 左：天気情報 -->
+        <div class="weather-panel">
+            <p id="location">場所はまだ取得していません</p>
+            <p id="weather">天気情報を取得していません</p>
+        </div>
+
+        <!-- 右：地図 -->
+        <div class="map-panel">
+            <h2>🗺️ 地図</h2>
+            <p>地図をクリックすると場所を変更できます。</p>
+            <div id="map"></div>
+        </div>
+
+    </div>
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+    <script src="index.js"></script>
+
 </body>
 </html>

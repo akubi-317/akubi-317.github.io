@@ -1,0 +1,41 @@
+*{box-sizing:border-box}
+body{margin:0;padding:30px;font-family:sans-serif;background:#eaf6ff;color:#333}
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size:42px;
+}
+a{
+    text-decoration: none;
+    border: none;
+    color:#f28500;
+}
+h1{text-align:center;color:#1976d2;font-size:42px;margin-bottom: 30px;}
+
+.container{display:flex;gap:30px;max-width:1200px;margin:auto}
+.weather-panel,.map-panel{background:white;border-radius:20px;padding:30px;box-shadow:0 4px 15px #0002}
+.weather-panel{flex:2}.map-panel{flex:1}
+h2{color:#1976d2}
+#location{font-size:28px;font-weight:bold}
+#currentWeather{font-size:26px}
+.quiz-box{text-align:center}
+.quiz-question{font-size:24px;font-weight:bold}
+.answer-area{margin:25px 0;font-size:24px}
+#answer{width:180px;padding:14px;font-size:24px;border:2px solid #b9d8ed;border-radius:10px;text-align:center}
+button{padding:13px 25px;font-size:18px;border:0;border-radius:10px;cursor:pointer;background:#1976d2;color:white}
+#result{min-height:35px;font-size:22px;font-weight:bold}
+.detail-button{background:#4caf50}
+.details{margin-top:20px;padding:20px;background:#f4faff;border-radius:15px}
+.hidden{display:none}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.detail-grid div{background:white;border-radius:12px;padding:15px;box-shadow:0 2px 7px #0001}
+.detail-grid span,.detail-grid strong{display:block}
+.detail-grid strong{font-size:26px;margin-top:8px}
+#map{width:100%;height:430px;border-radius:15px;overflow:hidden}
+.map-panel p{font-size:14px;color:#666}
+@media(max-width:800px){body{padding:15px}.container{flex-direction:column}h1{font-size:34px}#location{font-size:22px}#currentWeather,.quiz-question{font-size:20px}#map{height:350px}}
+.records{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:20px}
+.records div{background:#f4faff;border-radius:12px;padding:15px}
+.records span,.records strong{display:block}
+.records strong{font-size:30px;margin-top:7px}
